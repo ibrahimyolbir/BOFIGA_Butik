@@ -21,7 +21,7 @@ $(function () {
    
     
     function getRequest (input, gameSearchSection, maxRes, gameSearchResults) {
-        var url = 'http://api.walmartlabs.com/v1/search?callback=?';
+        var url = 'https://api.walmartlabs.com/v1/search?callback=?';
         var rules = {
             apiKey : 'aqybkh8wx4zbppp7ww9vqwf9' ,
             query: input,
