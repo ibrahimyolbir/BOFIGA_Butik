@@ -10,11 +10,22 @@ body {
     font-family: 'Capriola', sans-serif;
 }
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-nav{
+
+.sidebar-container{
     float: left;
     max-width: 160px;
     margin: 0;
     padding: 1em;
+    border: 1px solid #e9e9e9; 
+    border-top: 0; 
+    border-radius: 5px; 
+    box-shadow: 3px 3px 3px 3px rgba(0,0,0,.05);
+}
+.sidebar-container .Departments li {
+cursor: pointer;
+display: block;
+line-height: 16px;
+margin: 12px 0;
 }
 /*--------------------------------------------------------------------------------------------------------------------*/
                                              /*HEADER*/
@@ -473,7 +484,3 @@ form.example::after {
     background-color: #fff;
     border-color: #fff;
 }
-
-/*--------------------------------------------------------------------------------------------------------------------*/
-                                             /*SIGN UP*/
-/*--------------------------------------------------------------------------------------------------------------------*/

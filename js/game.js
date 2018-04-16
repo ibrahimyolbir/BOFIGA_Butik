@@ -73,5 +73,24 @@ $(function () {
         });
         $(gameSearchSection).append(`    </ul>
         `);
+        $('#location').marcoPolo({
+            data: {
+              intent: 'global',
+              limit: 20,
+              v: '20150601'
+            },
+            formatData: function (data) {
+              return data.response.venues;
+            },
+            formatItem: function (data, $item) {
+              return data.name;
+            },
+            minChars: 3,
+            onSelect: function (data, $item) {
+              this.val(data.name);
+            },
+            param: 'query',
+            required: true
+          });
     }
 });

@@ -58,7 +58,7 @@ $(function () {
                 <div class="item_button">
                     <div class="row">
                          <div class="price_item col-xs-12 col-md-5">
-                            <p>${i}</p>
+                            <p>${i}289</p>
                         </div>
                     <div  col-sm-7">
                         <button class="add_item" id="${i}"  productType="${bookType}"  >Lägg i Varukorg</button>

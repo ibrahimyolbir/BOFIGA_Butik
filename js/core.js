@@ -1,9 +1,6 @@
 $(document).ready(function(){
     var cart = [];
     $(document).on('click', '.add_item', function (e) {
-        console.log($(".add_item"));
-        console.log(this);
-        console.log($(this));
         var id = $(this).attr("id");
         var productType = $(this).attr("productType");
     
@@ -11,15 +8,15 @@ $(document).ready(function(){
         if(productType == filmType){
            product.picture = films[id].Poster;
            product.name = films[id].Title;
-           product.description = films[id].Year;
-           product.price = films[id].price;
+           product.description = "Excepteur sint occaecat cupidatat non proident";
+           product.price = films[id].Year;
 
         }else if(productType == bookType)
         {
             product.picture = books[id].volumeInfo.imageLinks.smallThumbnail;
             product.name = books[id].volumeInfo.title;
             product.description = books[id].Year;
-            product.price = id + "2"+id;
+            product.price = id + "289";
         } else if (productType == gameType) 
         {
            product.picture = games[id].mediumImage;
@@ -74,13 +71,26 @@ function displayCart() {
                         </div>
                     </td>
                     <td>
-                         <p>${cart[i].price}</p>
+                         <p>${cart[i].price}:-</p>
                     </td>
                     <td class="delete_item">
                     <span class="glyphicon glyphicon-trash  id="${i}"></span>
                    </td>
                   </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td>
+                            <div class="row">
+                            <div class="col-xs-12 col-sm-offset-8 col-sm-4">
+                                <div class="priceContainer text-right text-center">
+                                    <p>Totalpris</p>
+                                </div>
+                            </div>
+                            </div>
+                        </td>
+                    </tr>        
+                </tfoot>
               </table>
 </div>` }
     $(".cart_list").html(cartText);
